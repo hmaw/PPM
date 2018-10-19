@@ -1,3 +1,17 @@
-<p>
+
   edit works!
-</p>
+
+
+<div class="form-group border border-secondary rounded col-6">
+    <form (submit)="editProduct()"> 
+      <p> {{ editProd | json }} </p>
+      <h4>Edit a New Product</h4>
+      <h4>Title:</h4><input type="text" class="form-control" name="product.title" [(ngModel)]="product.title" />
+      <h4>Price</h4><input type="text" class="form-control" name="product.price" [(ngModel)]="product.price" />
+      <h4>Image url</h4><input type="text" class="form-control" name="product.imgUrl" [(ngModel)]="product.imgUrl" />
+      
+      <input class="btn btn-outline-Info"type="submit" value="Update" />
+      <button class="btn btn-outline-danger"[routerLink]="['/home']">Delete</button> 
+    </form>
+</div>
+

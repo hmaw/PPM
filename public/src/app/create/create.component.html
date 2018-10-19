@@ -1,3 +1,17 @@
-<p>
+
   create works!
-</p>
+
+<div class="form-group border border-secondary rounded col-6">
+    <form (submit)="addProduct()"> 
+      <!-- <p> {{ newProduct | json }} </p> -->
+      <h4>Create a New Product</h4>
+      <p *ngIf="flash "style="color:red;" > {{flash}} </p>
+      <h4>Title:</h4><input type="text" class="form-control" name="newProduct.title" [(ngModel)]="newProduct.title" />
+      <h4>Price</h4><input type="text" class="form-control" name="newProduct.price" [(ngModel)]="newProduct.price" />
+      <h4>Image url</h4><input type="text" class="form-control" name="newProduct.imgUrl" [(ngModel)]="newProduct.imgUrl" />
+      
+      <input class="btn btn-outline-success"type="submit" value="Create" />
+      <button class="btn btn-outline-danger"[routerLink]="['/home']">Cancel</button>
+    </form>
+</div>
+
