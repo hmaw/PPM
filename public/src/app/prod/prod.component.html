@@ -13,8 +13,8 @@
         <td> {{pstuff.title}}</td>
         <img src ="{{pstuff.imgUrl}}">
 
-        <td><button class="btn btn-outline-success float-right" [routerLink]="['/edit', pstuff._id]">Edit</button> 
-          <button class="btn btn-outline-danger float-right" (click)=delProduct(pstuff._id)>Delete</button>
+        <td><button class="btn btn-outline-success float-right" [routerLink]="['edit', pstuff._id]">Edit</button> 
+          <button class="btn btn-outline-danger float-right" (click)=delProduct('details, pstuff._id)>Delete</button>
       </tr>
     </tbody>
   </table>
